@@ -10,6 +10,7 @@ class Social_Links_Widget extends WP_Widget {
 			__( 'Social Links Widget', 'sl_domain' ), // Name
 			array( 'description' => __( 'Outputs social icons linked to profiles', 'sl_domain' ), ) // Args
 		);
+
 	}
 
 	/**
@@ -145,7 +146,7 @@ class Social_Links_Widget extends WP_Widget {
 			$facebook_icon = esc_attr($instance['facebook_icon']);
 		}
 		else{
-			$facebook_icon = plugins_url() . '/social-links/img/facebook.png';
+			$facebook_icon = esc_url( plugins_url( 'img/facebook.png', dirname(__FILE__) ) );
 		}
 
 		//Get Twitter Icon
@@ -153,7 +154,7 @@ class Social_Links_Widget extends WP_Widget {
 			$twitter_icon = esc_attr($instance['twitter_icon']);
 		}
 		else{
-			$twitter_icon = plugins_url() . '/social-links/img/twitter.png';
+			$twitter_icon = esc_url( plugins_url( 'img/twitter.png', dirname(__FILE__) ) ); 
 		}
 
 		//Get Twitter Icon
@@ -161,7 +162,8 @@ class Social_Links_Widget extends WP_Widget {
 			$linkedin_icon = esc_attr($instance['linkedin_icon']);
 		}
 		else{
-			$linkedin_icon = plugins_url() . '/social-links/img/linkedin.png';
+			$linkedin_icon = esc_url( plugins_url( 'img/linkedin.png', dirname(__FILE__) ) );
+
 		}
 
 		//Get Google Link
@@ -169,7 +171,7 @@ class Social_Links_Widget extends WP_Widget {
 			$google_icon = esc_attr($instance['google_icon']);
 		}
 		else{
-			$google_icon = plugins_url() . '/social-links/img/google.png';
+			$google_icon = esc_url( plugins_url( 'img/google.png', dirname(__FILE__) ) );  //
 		}
 
 
@@ -179,7 +181,7 @@ class Social_Links_Widget extends WP_Widget {
 			$instagram_icon = esc_attr($instance['instagram_icon']);
 		}
 		else{
-			$instagram_icon = plugins_url() . '/social-links/img/instagram.png';
+			$instagram_icon = esc_url( plugins_url( 'img/instagram.png', dirname(__FILE__) ) ); //
 		}
 
 		//Get instagram Link
@@ -187,8 +189,10 @@ class Social_Links_Widget extends WP_Widget {
 			$dribble_icon = esc_attr($instance['dribble_icon']);
 		}
 		else{
-			$dribble_icon = plugins_url() . '/social-links/img/dribble.png';
+			$dribble_icon =  esc_url( plugins_url( 'img/dribble.png', dirname(__FILE__) ) );//
 		}
+
+		
 
 		//Get Icon Size
 		if (isset($instance['icon_width'])) {
