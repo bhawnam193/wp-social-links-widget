@@ -4,7 +4,7 @@
 * Description: Adds social icons with links to profiles to 
 * Version: 1.0
 * Author: Bhawna
-* Plugin URI: http://www.raadeen.com/
+* Plugin URI: https://wordpress.org/plugins/wp-social-links-widget/
 *
 *
 **/
